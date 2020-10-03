@@ -22,12 +22,12 @@ public class Cam : MonoBehaviour
     }
 
 
-    private void FixedUpdate()
+    private void Update()
     {
         // get aim height
         _aimPosY = Mathf.Max(player.transform.position.y + posYAbovePlayer + player.rb.velocity.y * velocityMod, _bottomY);
 
         // move to the position
-        transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, _aimPosY, aimSpeed * Time.fixedDeltaTime), transform.position.z);
+        transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, _aimPosY, aimSpeed * Time.deltaTime), transform.position.z);
     }
 }

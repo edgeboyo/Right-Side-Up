@@ -214,9 +214,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc647bec9f83774c99d2332846a9d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 2142330888}
-  posYAbovePlayer: 2
+  player: {fileID: 2142330889}
+  posYAbovePlayer: 0
   aimSpeed: 2
+  velocityMod: 0.8
+  _bottomY: -1
 --- !u!4 &1136110178
 Transform:
   m_ObjectHideFlags: 0
@@ -709,6 +711,7 @@ MonoBehaviour:
   rb: {fileID: 2142330887}
   horizontalAcceleration: 50000
   maxHorizontalVelocity: 10
+  jumpForce: 30000
   sceneBorder: 7.62
 --- !u!212 &2142330890
 SpriteRenderer:

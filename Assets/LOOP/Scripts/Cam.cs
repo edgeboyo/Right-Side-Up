@@ -5,11 +5,13 @@ using UnityEngine;
 public class Cam : MonoBehaviour
 {
     [Header("References")]
-    public Transform player;
+    public Player player;
 
     [Header("Values")]
     public float posYAbovePlayer;
     public float aimSpeed;
+    public float velocityMod;
+    public float _bottomY;
 
     private float _aimPosY;
 
@@ -23,7 +25,7 @@ public class Cam : MonoBehaviour
     private void FixedUpdate()
     {
         // get aim height
-        _aimPosY = player.transform.position.y + posYAbovePlayer;
+        _aimPosY = Mathf.Max(player.transform.position.y + posYAbovePlayer + player.rb.velocity.y * velocityMod, _bottomY);
 
         // move to the position
         transform.position = new Vector3(transform.position.x, Mathf.Lerp(transform.position.y, _aimPosY, aimSpeed * Time.fixedDeltaTime), transform.position.z);

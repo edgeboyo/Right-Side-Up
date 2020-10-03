@@ -10,10 +10,13 @@ public class Player : MonoBehaviour
     [Header("Gameplay Values")]
     public float horizontalAcceleration;
     public float maxHorizontalVelocity;
+    public float jumpForce;
 
     [Header("Other Values")]
     public float sceneBorder;
-    
+
+
+    private bool _touching;
 
 
     void Start()
@@ -23,7 +26,11 @@ public class Player : MonoBehaviour
 
     void Update()
     {
-        
+        // Jumping
+        if (Input.GetKeyDown(KeyCode.W))
+        {
+            rb.AddForce(Vector2.up * jumpForce);
+        }
     }
 
     private void FixedUpdate()
@@ -34,11 +41,22 @@ public class Player : MonoBehaviour
             transform.position = new Vector2(-transform.position.x, transform.position.y);
 
         // Accelerate horizontally
-        rb.AddForce(Vector2.right * horizontalAcceleration * Time.fixedDeltaTime);
+        if(_touching)
+            rb.AddForce(Vector2.right * horizontalAcceleration * Time.fixedDeltaTime);
 
         // Drop to max velocity
         rb.velocity = new Vector2(Mathf.Min(rb.velocity.x, maxHorizontalVelocity), rb.velocity.y);
         Debug.Log(rb.velocity.magnitude);
+    }
+
+    public void OnCollisionStay2D(Collision2D collision)
+    {
+        _touching = true;
+    }
+
+    public void OnCollisionExit2D(Collision2D collision)
+    {
+        _touching = false;
     }
 
 }

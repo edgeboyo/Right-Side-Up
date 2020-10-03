@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
 
     [Header("Gameplay Values")]
     public float horizontalAcceleration;
-    public float maxVelocity;
+    public float maxHorizontalVelocity;
 
     [Header("Other Values")]
     public float sceneBorder;
@@ -37,7 +37,7 @@ public class Player : MonoBehaviour
         rb.AddForce(Vector2.right * horizontalAcceleration * Time.fixedDeltaTime);
 
         // Drop to max velocity
-        rb.velocity = rb.velocity.normalized * Mathf.Min(rb.velocity.magnitude, maxVelocity);
+        rb.velocity = new Vector2(Mathf.Min(rb.velocity.x, maxHorizontalVelocity), rb.velocity.y);
         Debug.Log(rb.velocity.magnitude);
     }
 

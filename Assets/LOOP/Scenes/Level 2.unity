@@ -480,7 +480,7 @@ GameObject:
   - component: {fileID: 777894915}
   - component: {fileID: 777894914}
   m_Layer: 10
-  m_Name: floor (1)
+  m_Name: Floor
   m_TagString: Terrain
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -877,7 +877,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4687074387341976742, guid: c7494eb91aef4bb4ebbb4ecc52e8e674, type: 3}
       propertyPath: m_Name
-      value: Ice Floor
+      value: Floor
       objectReference: {fileID: 0}
     - target: {fileID: 8738817349971381100, guid: c7494eb91aef4bb4ebbb4ecc52e8e674, type: 3}
       propertyPath: m_Sprite

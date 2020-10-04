@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3804124525617004674}
   - component: {fileID: 8738817349971381100}
-  - component: {fileID: 7220355331722627421}
+  - component: {fileID: 3646663919982317580}
   m_Layer: 10
   m_Name: Ice Floor
   m_TagString: Terrain
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &7220355331722627421
+--- !u!61 &3646663919982317580
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -107,5 +107,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 8.5, y: 2}
+  m_Size: {x: 2.89, y: 0.55}
   m_EdgeRadius: 0

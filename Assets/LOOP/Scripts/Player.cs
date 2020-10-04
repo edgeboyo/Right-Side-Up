@@ -12,8 +12,8 @@ public class Player : MonoBehaviour
     public float maxHorizontalVelocity;
     public float jumpForce;
 
-    [Header("Other Values")]
-    public float sceneBorder;
+    //[Header("Other Values")]
+    //public float sceneBorder;
 
 
     private bool _touching;
@@ -53,7 +53,6 @@ public class Player : MonoBehaviour
 
         // Drop to max velocity
         rb.velocity = new Vector2(Mathf.Min(rb.velocity.x, maxHorizontalVelocity), rb.velocity.y);
-        Debug.Log(rb.velocity.magnitude);
     }
 
     public void OnCollisionStay2D(Collision2D collision)

@@ -35,13 +35,20 @@ public class Player : MonoBehaviour
 
     private void FixedUpdate()
     {
+        Camera cam = Camera.main;
+        var vertExtent = cam.orthographicSize;
+        var horzExtent = vertExtent * Screen.width / Screen.height;
 
-        // Change sides if off screen
-        if (transform.position.x > sceneBorder || transform.position.x < -sceneBorder)
-            transform.position = new Vector2(-transform.position.x, transform.position.y);
+        // Change sides if off screen from right
+        if (transform.position.x > cam.transform.position.x + horzExtent)
+            transform.position = new Vector2(transform.position.x - 2*horzExtent, transform.position.y);
+
+        // Change sides if off screen from left
+        if (transform.position.x < cam.transform.position.x - horzExtent)
+            transform.position = new Vector2(transform.position.x + 2 * horzExtent, transform.position.y);
 
         // Accelerate horizontally
-        if(_touching)
+        if (_touching)
             rb.AddForce(Vector2.right * horizontalAcceleration * Time.fixedDeltaTime);
 
         // Drop to max velocity

@@ -27,6 +27,7 @@ public class MakeCpy : MonoBehaviour
         var vertExtent = cam.orthographicSize;
         var horzExtent = vertExtent * Screen.width / Screen.height;
 
+        transform.eulerAngles = new Vector3(player.transform.eulerAngles.x, player.transform.eulerAngles.y, player.transform.eulerAngles.z);
 
         float x = player.transform.position.x, y = player.transform.position.y;
 

@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 940035960524233823}
+  tool: {fileID: 0}
   explosionForce: 70000
   explosionRange: 6
   upwardsMod: 1
@@ -23,37 +24,17 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3318045680371825014, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3318045680371825014, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3659257175000526730, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
       propertyPath: m_Name
       value: tool 1 grenade
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075224589916664129, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075224589916664129, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075224589916664129, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075224589916664129, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075224589916664129, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075224589916664129, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8075224589916664129, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8075224589916664129, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
       propertyPath: m_RootOrder
@@ -71,6 +52,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8640935773140302839, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 71616e133fa036044af81ab22699ffc9, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
 --- !u!1 &8922069518493515440 stripped

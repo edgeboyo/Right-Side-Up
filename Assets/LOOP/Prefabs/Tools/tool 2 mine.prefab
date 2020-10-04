@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4905097629747252581}
   - component: {fileID: 1210262890166231107}
   m_Layer: 0
-  m_Name: tool 0 root
+  m_Name: tool 2 mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48,9 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rb: {fileID: 4905097629747252581}
   coll: {fileID: 1210262890166231107}
-  holdingForce: 30
+  holdingForce: 40
   throwForce: 10
-  heldDrag: 10
+  heldDrag: 8
   thrownDrag: 0.1
 --- !u!50 &4905097629747252581
 Rigidbody2D:
@@ -115,7 +115,7 @@ Transform:
   m_GameObject: {fileID: 5285580605550712720}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8075224589916664129}
   m_RootOrder: 0
@@ -160,7 +160,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 70141d51621e24facbca9196bbde84b4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 241f20f4bd83003439005f7d5e519236, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

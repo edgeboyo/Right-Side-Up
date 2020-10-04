@@ -57,4 +57,17 @@ public class PhysicsManager : MonoBehaviour
             .FindAll(a => ((Vector2)a.transform.position - pos).magnitude < range);
         return r;
     }
+
+    public void CreateExplosion(Vector2 pos, float force, float range, float upwards)
+    {
+        var targets = GetRigidbodiesInRange(pos, range);
+
+        foreach (Rigidbody2D r in targets)
+        {
+            if (!r.gameObject.Equals(gameObject))
+            {
+                r.AddExplosionForce(force, pos, range, upwards);
+            }
+        }
+    }
 }

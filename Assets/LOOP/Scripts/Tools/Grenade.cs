@@ -5,6 +5,7 @@ using UnityEngine;
 public class Grenade : MonoBehaviour
 {
     public Rigidbody2D rb;
+    public Tool tool;
 
     public float explosionForce;
     public float explosionRange;
@@ -13,17 +14,9 @@ public class Grenade : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        // Explode
+        // Explode on collision
 
-        var targets = PhysicsManager.Instance.GetRigidbodiesInRange(rb.position, explosionRange);
-
-        foreach(Rigidbody2D r in targets)
-        {
-            if (!r.gameObject.Equals(gameObject))
-            {
-                r.AddExplosionForce(explosionForce, rb.position, explosionRange, upwardsMod);
-            }
-        }
+        PhysicsManager.Instance.CreateExplosion(rb.position, explosionForce, explosionRange, upwardsMod);
 
         Destroy(gameObject);
     }

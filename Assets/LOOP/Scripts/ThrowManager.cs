@@ -9,9 +9,11 @@ public class ThrowManager : MonoBehaviour
     
     public float mouseMovementDynamic;
     public float mouseMovementBraking;
-    //public float maxMouseMovement;
+    public float maxThrowForce;
 
     public static ThrowManager Instance;
+
+    private float _markerScaleMod;
 
     private Vector2 _mouseMovement;
     private Vector2 _prevMouseMovement;
@@ -26,8 +28,10 @@ public class ThrowManager : MonoBehaviour
 
     void Start()
     {
-        _prevMousePos = GetMousePos();
-        _prevMouseMovement = Vector2.zero;
+        //_prevMousePos = GetMousePos();
+        //_prevMouseMovement = Vector2.zero;
+
+        //_markerScaleMod = 1f / maxThrowForce;
     }
 
     
@@ -35,19 +39,20 @@ public class ThrowManager : MonoBehaviour
     {
         // Calculate mouse movement
 
+        /*
         Vector2 newMouseMovement = GetMousePos() - _prevMousePos;
         _mouseMovement = Vector2.Lerp(_prevMouseMovement + newMouseMovement * mouseMovementDynamic, Vector2.zero, mouseMovementBraking * Time.fixedDeltaTime);
-        //_mouseMovement = _mouseMovement.normalized * Mathf.Min(_mouseMovement.magnitude, maxMouseMovement);
+
 
         throwMarker.position = GetWorldMousePos();
         throwMarker.rotation = Quaternion.LookRotation(Vector3.forward, _mouseMovement.normalized);
-        throwMarker.localScale = new Vector2(throwMarker.localScale.x, _mouseMovement.magnitude / 50);
+        throwMarker.localScale = new Vector2(throwMarker.localScale.x, GetThrowForce().magnitude * _markerScaleMod);
 
 
         _prevMouseMovement = _mouseMovement;
         _prevMousePos = GetMousePos();
+        */
     }
-
 
 
     public Vector2 GetMousePos()
@@ -62,6 +67,6 @@ public class ThrowManager : MonoBehaviour
 
     public Vector2 GetThrowForce()
     {
-        return _mouseMovement;
+        return _mouseMovement.normalized * Mathf.Min(_mouseMovement.magnitude,  maxThrowForce);
     }
 }

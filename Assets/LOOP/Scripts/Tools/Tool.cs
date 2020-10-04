@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -13,7 +14,10 @@ public class Tool : MonoBehaviour
     public float heldDrag;
     public float thrownDrag;
 
+    public EventHandler Thrown;
+
     private bool _used;
+
 
 
 
@@ -33,7 +37,7 @@ public class Tool : MonoBehaviour
         }
     }
 
-    public void Use()
+    public void Throw()
     {
         _used = true;
 
@@ -43,6 +47,13 @@ public class Tool : MonoBehaviour
 
         rb.drag = thrownDrag;
 
-        rb.AddForce(ThrowManager.Instance.GetThrowForce() * throwForce);
+        //rb.AddForce(ThrowManager.Instance.GetThrowForce() * throwForce);
+
+        OnThrown();
+    }
+
+    public void OnThrown()
+    {
+        Thrown?.Invoke(this, new EventArgs());
     }
 }

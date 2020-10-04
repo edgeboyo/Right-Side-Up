@@ -54,7 +54,7 @@ public class ToolManager : MonoBehaviour
         SelectedTool = tool;
 
         if (HeldTool)
-            Destroy(HeldTool);
+            Destroy(HeldTool.gameObject);
 
         HeldTool = Instantiate(
             SelectedTool.gameObject, 
@@ -65,7 +65,7 @@ public class ToolManager : MonoBehaviour
 
     private void ThrowTool()
     {
-        HeldTool.Use();
+        HeldTool.Throw();
         HeldTool = null;
 
         ChooseTool(SelectedTool);

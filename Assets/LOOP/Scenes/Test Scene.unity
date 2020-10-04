@@ -674,6 +674,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  screenThreshold: 3
   posYAbovePlayer: 0
   aimSpeed: 2
   velocityMod: 0.8

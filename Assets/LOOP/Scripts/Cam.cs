@@ -8,6 +8,7 @@ public class Cam : MonoBehaviour
     public GameObject player;
 
     [Header("Values")]
+    public int screenThreshold = 4;
     public float posYAbovePlayer;
     public float aimSpeed;
     public float velocityMod;
@@ -30,11 +31,11 @@ public class Cam : MonoBehaviour
         float py = player.transform.position.y;
 
 
-        if (py >= (transform.position.y + vertExtent/4))
-            transform.position = new Vector3(transform.position.x, transform.position.y + (py - (transform.position.y + vertExtent / 4)), transform.position.z);
+        if (py >= (transform.position.y + vertExtent/screenThreshold))
+            transform.position = new Vector3(transform.position.x, transform.position.y + (py - (transform.position.y + vertExtent / screenThreshold)), transform.position.z);
 
-        if (py <= (transform.position.y - vertExtent / 4))
-            transform.position = new Vector3(transform.position.x, transform.position.y - ((transform.position.y - vertExtent / 4) - py), transform.position.z);
+        if (py <= (transform.position.y - vertExtent / screenThreshold))
+            transform.position = new Vector3(transform.position.x, transform.position.y - ((transform.position.y - vertExtent / screenThreshold) - py), transform.position.z);
         /**
         // get aim height
         _aimPosY = Mathf.Max(player.transform.position.y + posYAbovePlayer + player.rb.velocity.y * velocityMod, _bottomY);

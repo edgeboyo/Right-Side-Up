@@ -68,7 +68,8 @@ public class Tool : MonoBehaviour
 
         rb.drag = thrownDrag;
 
-        AudioSource.PlayClipAtPoint(throwSound, Vector2.zero);
+        if(throwSound)
+            AudioSource.PlayClipAtPoint(throwSound, Vector2.zero);
 
         OnThrown();
     }

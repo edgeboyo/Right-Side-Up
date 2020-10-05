@@ -47,6 +47,12 @@ public class Explosive : MonoBehaviour
 
     private void Activate()
     {
+
+        if (activationSound && !_active)
+        {
+            AudioSource.PlayClipAtPoint(activationSound, Vector2.zero);
+        }
+
         _active = true;
         tool.sr.sprite = activatedSprite;
 
@@ -58,10 +64,7 @@ public class Explosive : MonoBehaviour
             r.rotation = tool.rb.rotation;
         }
 
-        if (activationSound)
-        {
-            AudioSource.PlayClipAtPoint(activationSound, Vector2.zero);
-        }
+        
     }
 
     public void Explode()

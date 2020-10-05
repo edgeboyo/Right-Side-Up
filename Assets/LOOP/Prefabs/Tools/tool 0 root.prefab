@@ -54,6 +54,7 @@ MonoBehaviour:
   throwForce: 10
   heldDrag: 4
   thrownDrag: 0.1
+  throwSound: {fileID: 8300000, guid: 918d08b7716b5b2499e4a6224c2ac362, type: 3}
 --- !u!50 &4905097629747252581
 Rigidbody2D:
   serializedVersion: 4

@@ -19,6 +19,8 @@ public class Explosive : MonoBehaviour
     public GameObject activationPrefab;
     public GameObject explosionPrefab;
 
+    public AudioClip explosionSound;
+
 
     private bool _active;
 
@@ -59,6 +61,12 @@ public class Explosive : MonoBehaviour
     {
         PhysicsManager.Instance.CreateExplosion(tool.rb.position, explosionForce, explosionRange, upwardsMod);
         Instantiate(explosionPrefab, tool.rb.position, Quaternion.identity);
+
+        if (explosionSound)
+        {
+            AudioSource.PlayClipAtPoint(explosionSound, Vector2.zero);
+        }
+
         Destroy(gameObject);
     }
 

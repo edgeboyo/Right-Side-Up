@@ -16,6 +16,8 @@ public class Tool : MonoBehaviour
     public float heldDrag;
     public float thrownDrag;
 
+    public AudioClip throwSound;
+
     public EventHandler Thrown;
 
 
@@ -65,6 +67,8 @@ public class Tool : MonoBehaviour
         coll.enabled = true;
 
         rb.drag = thrownDrag;
+
+        AudioSource.PlayClipAtPoint(throwSound, Vector2.zero);
 
         OnThrown();
     }

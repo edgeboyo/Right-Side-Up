@@ -22,6 +22,7 @@ MonoBehaviour:
   - Terrain
   activationPrefab: {fileID: 5674423778025448854, guid: 17ebff15e0ef46a4fa8c2479c9cc10a8, type: 3}
   explosionPrefab: {fileID: 4680000180832633783, guid: 74b53bfd048d3da4da95ddb6d58650a2, type: 3}
+  explosionSound: {fileID: 8300000, guid: 10b14bf97706345438ad81093d793ee8, type: 3}
 --- !u!1001 &5267458907836633402
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -17,7 +17,11 @@ public class Tool : MonoBehaviour
 
     public EventHandler Thrown;
 
+
+    private const float destroyHeight = -10f;
+
     private bool _used;
+
 
     private void Awake()
     {
@@ -36,6 +40,11 @@ public class Tool : MonoBehaviour
         {
             rb.AddForce((ThrowManager.Instance.GetWorldMousePos() - (Vector2)transform.position) * holdingForce);
         }
+
+        if(rb.position.y < destroyHeight)
+        {
+            Destroy(gameObject);
+        }
     }
 
 
@@ -43,13 +52,11 @@ public class Tool : MonoBehaviour
     {
         _used = true;
 
-        transform.parent = PhysicsManager.Instance.GetParent();
+        //transform.parent = PhysicsManager.Instance.GetParent();
 
         coll.enabled = true;
 
         rb.drag = thrownDrag;
-
-        //rb.AddForce(ThrowManager.Instance.GetThrowForce() * throwForce);
 
         OnThrown();
     }

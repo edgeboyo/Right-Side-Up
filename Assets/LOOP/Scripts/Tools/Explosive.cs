@@ -15,6 +15,7 @@ public class Explosive : MonoBehaviour
     public List<string> activationTriggers;
     public List<string> explosionTriggers;
 
+    public GameObject activationPrefab;
     public GameObject explosionPrefab;
 
 
@@ -37,6 +38,14 @@ public class Explosive : MonoBehaviour
     {
         _active = true;
         tool.sr.sprite = activatedSprite;
+
+        if (activationPrefab)
+        {
+            GameObject ac = Instantiate(activationPrefab, tool.rb.position, tool.transform.rotation);
+            Rigidbody2D r = ac.GetComponent<Rigidbody2D>();
+            r.velocity = -tool.rb.velocity;
+            r.rotation = tool.rb.rotation;
+        }
     }
 
     private void Explode()

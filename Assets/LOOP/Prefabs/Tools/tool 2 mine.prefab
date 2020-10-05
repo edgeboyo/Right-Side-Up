@@ -40,13 +40,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tool: {fileID: 718116776152984938}
   activatedSprite: {fileID: 21300000, guid: 241f20f4bd83003439005f7d5e519236, type: 3}
-  explosionForce: 70000
+  explosionForce: 7000
   explosionRange: 6
   upwardsMod: 1.5
   activationTriggers:
   - Terrain
   explosionTriggers:
   - Player
+  activationPrefab: {fileID: 0}
   explosionPrefab: {fileID: 4680000180832633783, guid: 74b53bfd048d3da4da95ddb6d58650a2, type: 3}
 --- !u!1001 &4542764817612663672
 PrefabInstance:

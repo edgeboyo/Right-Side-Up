@@ -10,7 +10,7 @@ public class Player : MonoBehaviour
     [Header("Gameplay Values")]
     public float horizontalAcceleration;
     public float maxHorizontalVelocity;
-    public float jumpForce;
+    //public float jumpForce;
 
     //[Header("Other Values")]
     //public float sceneBorder;
@@ -27,10 +27,12 @@ public class Player : MonoBehaviour
     void Update()
     {
         // Jumping
+        /*
         if (Input.GetKeyDown(KeyCode.W))
         {
             rb.AddForce(Vector2.up * jumpForce);
         }
+        */
     }
 
     private void FixedUpdate()

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Tool : MonoBehaviour
 {
+    public SpriteRenderer sr;
     public Rigidbody2D rb;
     public Collider2D coll;
 
@@ -18,10 +19,7 @@ public class Tool : MonoBehaviour
 
     private bool _used;
 
-
-
-
-    void Start()
+    private void Awake()
     {
         coll.enabled = false;
 
@@ -29,13 +27,17 @@ public class Tool : MonoBehaviour
     }
 
 
-    void Update()
+
+
+
+    private void Update()
     {
         if (!_used)
         {
             rb.AddForce((ThrowManager.Instance.GetWorldMousePos() - (Vector2)transform.position) * holdingForce);
         }
     }
+
 
     public void Throw()
     {

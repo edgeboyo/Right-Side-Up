@@ -4,39 +4,73 @@ using UnityEngine;
 
 public class Explosive : MonoBehaviour
 {
-    public Rigidbody2D rb;
     public Tool tool;
+
+    public Sprite activatedSprite;
 
     public float explosionForce;
     public float explosionRange;
     public float upwardsMod;
 
-    public List<string> triggers;
+    public List<string> activationTriggers;
+    public List<string> explosionTriggers;
 
     public GameObject explosionPrefab;
 
+
+    private bool _active;
+
+
+    private void Start()
+    {
+        _active = false;
+
+        // Activate if no activation triggers
+        if(activationTriggers.Count == 0)
+        {
+            Activate();
+        }
+    }
+
+
+    private void Activate()
+    {
+        _active = true;
+        tool.sr.sprite = activatedSprite;
+    }
+
+    private void Explode()
+    {
+        PhysicsManager.Instance.CreateExplosion(tool.rb.position, explosionForce, explosionRange, upwardsMod);
+        Instantiate(explosionPrefab, tool.rb.position, Quaternion.identity);
+        Destroy(gameObject);
+    }
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject col = collision.gameObject;
 
-        // Check for trigger
-        bool triggered = false;
-        foreach(string trigger in triggers)
+        // Check for activation trigger
+        foreach (string trigger in activationTriggers)
         {
             if (col.CompareTag(trigger))
             {
-                triggered = true;
+                Activate();
             }
         }
 
-        // Explode on collision
-        if (triggered)
+        // Check for explosion trigger
+        if (_active)
         {
-            PhysicsManager.Instance.CreateExplosion(rb.position, explosionForce, explosionRange, upwardsMod);
-            Instantiate(explosionPrefab, rb.position, Quaternion.identity);
-            Destroy(gameObject);
+            foreach (string trigger in explosionTriggers)
+            {
+                if (col.CompareTag(trigger))
+                {
+                    Explode();
+                }
+            }
         }
+        
         
     }
 

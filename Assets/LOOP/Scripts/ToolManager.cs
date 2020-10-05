@@ -25,7 +25,7 @@ public class ToolManager : MonoBehaviour
     }
 
 
-    void Update()
+    private void Update()
     {
         // Choosing a tool (number keys)
 

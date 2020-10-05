@@ -5,53 +5,19 @@ using UnityEngine;
 public class ThrowManager : MonoBehaviour
 {
 
-    public Transform throwMarker;
-    
     public float mouseMovementDynamic;
     public float mouseMovementBraking;
     public float maxThrowForce;
 
     public static ThrowManager Instance;
 
-    private float _markerScaleMod;
-
     private Vector2 _mouseMovement;
-    private Vector2 _prevMouseMovement;
-    private Vector2 _prevMousePos;
 
 
 
     private void Awake()
     {
         Instance = this;
-    }
-
-    void Start()
-    {
-        //_prevMousePos = GetMousePos();
-        //_prevMouseMovement = Vector2.zero;
-
-        //_markerScaleMod = 1f / maxThrowForce;
-    }
-
-    
-    void FixedUpdate()
-    {
-        // Calculate mouse movement
-
-        /*
-        Vector2 newMouseMovement = GetMousePos() - _prevMousePos;
-        _mouseMovement = Vector2.Lerp(_prevMouseMovement + newMouseMovement * mouseMovementDynamic, Vector2.zero, mouseMovementBraking * Time.fixedDeltaTime);
-
-
-        throwMarker.position = GetWorldMousePos();
-        throwMarker.rotation = Quaternion.LookRotation(Vector3.forward, _mouseMovement.normalized);
-        throwMarker.localScale = new Vector2(throwMarker.localScale.x, GetThrowForce().magnitude * _markerScaleMod);
-
-
-        _prevMouseMovement = _mouseMovement;
-        _prevMousePos = GetMousePos();
-        */
     }
 
 

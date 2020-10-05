@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -26,13 +27,19 @@ public class Explosive : MonoBehaviour
     {
         _active = false;
 
+        tool.Thrown += OnThrown;
+    }
+
+
+
+    private void OnThrown(object o, EventArgs e)
+    {
         // Activate if no activation triggers
-        if(activationTriggers.Count == 0)
+        if (activationTriggers.Count == 0)
         {
             Activate();
         }
     }
-
 
     private void Activate()
     {
@@ -43,7 +50,7 @@ public class Explosive : MonoBehaviour
         {
             GameObject ac = Instantiate(activationPrefab, tool.rb.position, tool.transform.rotation);
             Rigidbody2D r = ac.GetComponent<Rigidbody2D>();
-            r.velocity = -tool.rb.velocity;
+            r.velocity = tool.rb.velocity;
             r.rotation = tool.rb.rotation;
         }
     }

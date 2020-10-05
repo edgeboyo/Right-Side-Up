@@ -106,6 +106,11 @@ public class Explosive : MonoBehaviour
         
     }
 
+    public bool isActive()
+    {
+        return _active;
+    }
+
     public bool isDone()
     {
         return _exploded;

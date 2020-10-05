@@ -80,7 +80,7 @@ public class PhysicsManager : MonoBehaviour
                 {
                     Debug.Log("Shit should work!");
                     Explosive explode = r.gameObject.GetComponent<Explosive>();
-                    if(!explode.isDone())
+                    if(!explode.isDone() && explode.isActive())
                         explode.Explode();
                 }
                 else

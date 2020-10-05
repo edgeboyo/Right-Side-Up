@@ -4,11 +4,6 @@ using UnityEngine;
 
 public class TimeShift : MonoBehaviour
 {
-    public float coolDownTime = 5;
-    float coolDown = 0;
-
-    public float abilityTime = 1;
-    float remaining = 0;
 
     enum State {idle, running, cooldown};
     State current = State.idle;
@@ -29,14 +24,8 @@ public class TimeShift : MonoBehaviour
                     SlowMo();
                 break;
             case (State.running):
-                remaining -= Time.deltaTime;
-                if (remaining <= 0)
+                if (Input.GetKeyDown(KeyCode.F))
                     NoMoSlowMo();
-                break;
-            case (State.cooldown):
-                coolDown -= Time.deltaTime;
-                if (coolDown <= 0)
-                    current = State.idle;
                 break;
             default:
                 break;
@@ -48,14 +37,12 @@ public class TimeShift : MonoBehaviour
     void SlowMo()
     {
         current = State.running;
-        remaining = abilityTime;
         Time.timeScale = 0.5f;
     }
 
     void NoMoSlowMo()
     {
-        current = State.cooldown;
-        coolDown = coolDownTime;
+        current = State.idle;
         Time.timeScale = 1.0f;
     }
 }

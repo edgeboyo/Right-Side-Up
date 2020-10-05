@@ -26,7 +26,7 @@ public class StickyBomb : MonoBehaviour
         {
             rb.isKinematic = true;
             rb.velocity = Vector2.zero;
-            rb.rotation = 0;
+            rb.freezeRotation = true;
         }
     }
 }

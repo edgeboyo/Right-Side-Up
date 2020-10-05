@@ -556,7 +556,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1017191406916030220, guid: 3592b4092fc83314ebe63286f86c0f7e, type: 3}
       propertyPath: nextSceneId
-      value: 0
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3649854839083599634, guid: 3592b4092fc83314ebe63286f86c0f7e, type: 3}
       propertyPath: m_audioClip

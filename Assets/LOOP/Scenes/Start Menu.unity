@@ -646,6 +646,10 @@ PrefabInstance:
       propertyPath: m_AdditionalShaderChannelsFlag
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 7502535422849023450, guid: 3592b4092fc83314ebe63286f86c0f7e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7502535423014806416, guid: 3592b4092fc83314ebe63286f86c0f7e, type: 3}
       propertyPath: m_Name
       value: Scene Stuff

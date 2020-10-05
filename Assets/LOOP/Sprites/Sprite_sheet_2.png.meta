@@ -29,6 +29,24 @@ TextureImporter:
   - first:
       213: -427172758049101080
     second: Portal Blue
+  - first:
+      213: -5973377376934574820
+    second: Portal Blue
+  - first:
+      213: -5973377376934574820
+    second: Portal Blue
+  - first:
+      213: -8664443738695706075
+    second: Portal Blue Front
+  - first:
+      213: -427172758049101080
+    second: Portal Blue
+  - first:
+      213: 243526412954744086
+    second: Portal Blue Front
+  - first:
+      213: 4098952474468852077
+    second: Portal Front Pink
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -131,10 +149,10 @@ TextureImporter:
       name: Sprite_sheet_2_0
       rect:
         serializedVersion: 2
-        x: 337
+        x: 340
         y: 659
-        width: 70
-        height: 85
+        width: 63
+        height: 82
       alignment: 9
       pivot: {x: 0.44987357, y: 0.38991842}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -278,12 +296,12 @@ TextureImporter:
       name: Portal Pink
       rect:
         serializedVersion: 2
-        x: 780
+        x: 814
         y: 867
-        width: 68
+        width: 34
         height: 203
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -299,10 +317,10 @@ TextureImporter:
       name: Portal Blue
       rect:
         serializedVersion: 2
-        x: 901
-        y: 859
-        width: 84
-        height: 212
+        x: 942
+        y: 871
+        width: 50
+        height: 192
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -312,6 +330,48 @@ TextureImporter:
       bones: []
       spriteID: 8ea62cac3a0621af0800000000000000
       internalID: -427172758049101080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Sprite_sheet_2_9
+      rect:
+        serializedVersion: 2
+        x: 884
+        y: 868
+        width: 65
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 615b7997bfd216300800000000000000
+      internalID: 243526412954744086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Portal Front Pink
+      rect:
+        serializedVersion: 2
+        x: 762
+        y: 867
+        width: 52
+        height: 202
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61acefee8762e830800000000000000
+      internalID: 4098952474468852077
       vertices: []
       indices: 
       edges: []

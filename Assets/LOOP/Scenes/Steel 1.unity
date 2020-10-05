@@ -3628,6 +3628,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1017191406916030220, guid: 3592b4092fc83314ebe63286f86c0f7e, type: 3}
+      propertyPath: nextSceneId
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 7502535423014806416, guid: 3592b4092fc83314ebe63286f86c0f7e, type: 3}
       propertyPath: m_Name
       value: Scene Stuff

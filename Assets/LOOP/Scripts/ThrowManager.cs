@@ -30,9 +30,4 @@ public class ThrowManager : MonoBehaviour
     {
         return Camera.main.ScreenToWorldPoint(GetMousePos());
     }
-
-    public Vector2 GetThrowForce()
-    {
-        return _mouseMovement.normalized * Mathf.Min(_mouseMovement.magnitude,  maxThrowForce);
-    }
 }

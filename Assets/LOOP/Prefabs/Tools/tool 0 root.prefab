@@ -49,9 +49,10 @@ MonoBehaviour:
   sr: {fileID: 8640935773140302839}
   rb: {fileID: 4905097629747252581}
   coll: {fileID: 1210262890166231107}
-  holdingForce: 30
+  holdingForce: 150
+  holdingTorqueApplied: -1
   throwForce: 10
-  heldDrag: 10
+  heldDrag: 4
   thrownDrag: 0.1
 --- !u!50 &4905097629747252581
 Rigidbody2D:
@@ -67,7 +68,7 @@ Rigidbody2D:
   m_UseAutoMass: 0
   m_Mass: 2
   m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_AngularDrag: 1
   m_GravityScale: 1
   m_Material: {fileID: 6200000, guid: 065dae50b89ef004596d3f193fac313b, type: 2}
   m_Interpolate: 0

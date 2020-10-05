@@ -10,6 +10,7 @@ public class Tool : MonoBehaviour
     public Collider2D coll;
 
     public float holdingForce;
+    public float holdingTorqueApplied;
     public float throwForce;
 
     public float heldDrag;
@@ -21,7 +22,7 @@ public class Tool : MonoBehaviour
     private const float destroyHeight = -10f;
 
     private bool _used;
-
+    private Vector2 _prevVel;
 
 
     private void Awake()
@@ -35,11 +36,18 @@ public class Tool : MonoBehaviour
 
 
 
-    private void Update()
+    private void FixedUpdate()
     {
         if (!_used)
         {
+            float velDiff = (rb.velocity - _prevVel).magnitude;
+
             rb.AddForce((ThrowManager.Instance.GetWorldMousePos() - (Vector2)transform.position) * holdingForce);
+
+            rb.AddTorque(Vector2.SignedAngle(rb.velocity, _prevVel) * velDiff * holdingTorqueApplied);
+            Debug.Log(Vector2.SignedAngle(rb.velocity, _prevVel) * velDiff  * holdingTorqueApplied);
+
+            _prevVel = rb.velocity;
         }
 
         if(rb.position.y < destroyHeight)

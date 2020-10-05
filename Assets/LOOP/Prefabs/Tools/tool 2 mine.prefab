@@ -61,8 +61,8 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6752275352105721934}
     - target: {fileID: -5261215987303643630, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
-      propertyPath: heldDrag
-      value: 8
+      propertyPath: holdingTorqueApplied
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3659257175000526730, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
       propertyPath: m_Name

@@ -128,6 +128,8 @@ public class SceneControl : MonoBehaviour
 
     private IEnumerator NextScene()
     {
+
+        Time.timeScale = 1f;
         yield return new WaitForSeconds(transitionTime + sceneChangeDelay + exitDelay);
 
         SceneManager.LoadScene(nextSceneId);

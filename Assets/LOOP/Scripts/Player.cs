@@ -59,12 +59,23 @@ public class Player : MonoBehaviour
 
     public void OnCollisionStay2D(Collision2D collision)
     {
-        _touching = true;
+        GameObject col = collision.gameObject;
+
+        if (col.CompareTag("Terrain"))
+        {
+            _touching = true;
+        }
     }
 
     public void OnCollisionExit2D(Collision2D collision)
     {
-        _touching = false;
+        GameObject col = collision.gameObject;
+
+        if (col.CompareTag("Terrain"))
+        {
+            _touching = false;
+        }
+
     }
 
 }

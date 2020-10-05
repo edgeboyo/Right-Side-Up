@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/LOOP/Scenes/Start Menu.unity
+    guid: faab3ac8f9b4caf458f81a0630b06f67
+  - enabled: 1
+    path: Assets/LOOP/Scenes/Tutorial.unity
+    guid: b20d67bec7b174f40bab321aa9883010
   m_configObjects: {}

@@ -14,6 +14,15 @@ TextureImporter:
   - first:
       213: 2960362332907402262
     second: Sprite_sheet_2_3
+  - first:
+      213: 3760425436889228405
+    second: Ramp_Wooden
+  - first:
+      213: -2223976483442365368
+    second: Ramp_Ice
+  - first:
+      213: 7792553924138003448
+    second: Ramp_Metal
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -192,6 +201,69 @@ TextureImporter:
       bones: []
       spriteID: 614746b6bd1551920800000000000000
       internalID: 2960362332907402262
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramp_Wooden
+      rect:
+        serializedVersion: 2
+        x: 1132
+        y: 98
+        width: 195
+        height: 147
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5742022e207bf2430800000000000000
+      internalID: 3760425436889228405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramp_Ice
+      rect:
+        serializedVersion: 2
+        x: 1372
+        y: 92
+        width: 198
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c6893eb29d221e0800000000000000
+      internalID: -2223976483442365368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Ramp_Metal
+      rect:
+        serializedVersion: 2
+        x: 1591
+        y: 92
+        width: 196
+        height: 145
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fb625dd186b42c60800000000000000
+      internalID: 7792553924138003448
       vertices: []
       indices: 
       edges: []

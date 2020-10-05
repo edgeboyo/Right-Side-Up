@@ -45,7 +45,6 @@ public class Tool : MonoBehaviour
             rb.AddForce((ThrowManager.Instance.GetWorldMousePos() - (Vector2)transform.position) * holdingForce);
 
             rb.AddTorque(Vector2.SignedAngle(rb.velocity, _prevVel) * velDiff * holdingTorqueApplied);
-            Debug.Log(Vector2.SignedAngle(rb.velocity, _prevVel) * velDiff  * holdingTorqueApplied);
 
             _prevVel = rb.velocity;
         }

@@ -23,4 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LOOP/Scenes/Level 4.unity
     guid: cf82a13e11eb8444498a4a8549c4228f
+  - enabled: 1
+    path: Assets/LOOP/Scenes/Steel 1.unity
+    guid: 7cc3c337a9272a0469caa078a44fa9c0
+  - enabled: 1
+    path: Assets/LOOP/Scenes/Steel 2.unity
+    guid: 744d4faf95397c7458a964d6eb40de25
   m_configObjects: {}

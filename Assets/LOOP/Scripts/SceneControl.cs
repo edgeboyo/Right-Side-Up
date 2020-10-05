@@ -88,6 +88,20 @@ public class SceneControl : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            // Quit to menu
+            FadeToBlack();
+            ChangeScene(0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            // Restart
+            FadeToBlack();
+            ChangeScene(SceneManager.GetActiveScene().buildIndex);
+        }
+
     }
 
     public void Enter()

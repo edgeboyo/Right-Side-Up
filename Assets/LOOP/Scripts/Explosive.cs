@@ -23,11 +23,13 @@ public class Explosive : MonoBehaviour
     public AudioClip activationSound;
 
     private bool _active;
+    private bool _exploded;
 
 
     private void Start()
     {
         _active = false;
+        _exploded = false;
 
         tool.Thrown += OnThrown;
     }
@@ -64,6 +66,7 @@ public class Explosive : MonoBehaviour
 
     public void Explode()
     {
+        _exploded = true;
         PhysicsManager.Instance.CreateExplosion(tool.rb.position, explosionForce, explosionRange, upwardsMod);
         Instantiate(explosionPrefab, tool.rb.position, Quaternion.identity);
 
@@ -103,4 +106,8 @@ public class Explosive : MonoBehaviour
         
     }
 
+    public bool isDone()
+    {
+        return _exploded;
+    }
 }

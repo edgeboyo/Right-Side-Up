@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7889633365361347573}
   m_Layer: 0
   m_Name: grenade pin
-  m_TagString: Untagged
+  m_TagString: Tool
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,3 +157,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef29c1a15c4e4a040a0d1accdab8020a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  time: 2.5

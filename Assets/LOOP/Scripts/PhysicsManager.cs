@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class PhysicsManager : MonoBehaviour
@@ -35,6 +36,13 @@ public class PhysicsManager : MonoBehaviour
     private void Refresh()
     {
         parent.GetComponentsInChildren(rigidbodies);
+        foreach(GameObject go in GameObject.FindGameObjectsWithTag("Tool"))
+        {
+            if(go.GetComponent<Rigidbody2D>() != null)
+            {
+                rigidbodies.Add(go.GetComponent<Rigidbody2D>());
+            }
+        }
     }
 
 
@@ -64,9 +72,19 @@ public class PhysicsManager : MonoBehaviour
 
         foreach (Rigidbody2D r in targets)
         {
+            Debug.Log(r);
+            
             if (!r.gameObject.Equals(gameObject))
             {
-                r.AddExplosionForce(force, pos, range, upwards);
+                if (r.gameObject.GetComponent<Explosive>() != null)
+                {
+                    Debug.Log("Shit should work!");
+                    Explosive explode = r.gameObject.GetComponent<Explosive>();
+                    if(!explode.isDone())
+                        explode.Explode();
+                }
+                else
+                    r.AddExplosionForce(force, pos, range, upwards);
             }
         }
     }

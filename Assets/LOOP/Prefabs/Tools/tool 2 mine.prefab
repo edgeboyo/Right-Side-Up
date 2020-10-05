@@ -70,6 +70,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: tool 2 mine
       objectReference: {fileID: 0}
+    - target: {fileID: 3659257175000526730, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
+      propertyPath: m_TagString
+      value: Tool
+      objectReference: {fileID: 0}
     - target: {fileID: 4905097629747252581, guid: d671d05c41bf2e34e9783d10e03074b4, type: 3}
       propertyPath: m_Mass
       value: 4

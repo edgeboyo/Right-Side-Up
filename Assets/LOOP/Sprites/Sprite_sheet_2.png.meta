@@ -23,6 +23,12 @@ TextureImporter:
   - first:
       213: 7792553924138003448
     second: Ramp_Metal
+  - first:
+      213: -2288304948234297975
+    second: Portal Pink
+  - first:
+      213: -427172758049101080
+    second: Portal Blue
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -214,7 +220,7 @@ TextureImporter:
         width: 195
         height: 147
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -235,7 +241,7 @@ TextureImporter:
         width: 198
         height: 145
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -256,7 +262,7 @@ TextureImporter:
         width: 196
         height: 145
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -264,6 +270,48 @@ TextureImporter:
       bones: []
       spriteID: 8fb625dd186b42c60800000000000000
       internalID: 7792553924138003448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Portal Pink
+      rect:
+        serializedVersion: 2
+        x: 780
+        y: 867
+        width: 68
+        height: 203
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98dd9b606ce4e30e0800000000000000
+      internalID: -2288304948234297975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Portal Blue
+      rect:
+        serializedVersion: 2
+        x: 901
+        y: 859
+        width: 84
+        height: 212
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ea62cac3a0621af0800000000000000
+      internalID: -427172758049101080
       vertices: []
       indices: 
       edges: []

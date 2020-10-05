@@ -64,30 +64,6 @@ public class SceneControl : MonoBehaviour
         music.volume = Mathf.Min(1, _musicTimer / transitionTime) * _musicVolume;
 
 
-        if (Input.GetKey(KeyCode.S))
-        {
-            if (Input.GetKeyDown(KeyCode.Alpha1))
-            {
-                ChangeScene(0);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha2))
-            {
-                ChangeScene(1);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha3))
-            {
-                ChangeScene(2);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha4))
-            {
-                ChangeScene(3);
-            }
-            if (Input.GetKeyDown(KeyCode.Alpha5))
-            {
-                ChangeScene(4);
-            }
-        }
-
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             // Quit to menu

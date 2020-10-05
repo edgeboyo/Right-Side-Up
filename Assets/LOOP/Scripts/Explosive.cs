@@ -20,7 +20,7 @@ public class Explosive : MonoBehaviour
     public GameObject explosionPrefab;
 
     public AudioClip explosionSound;
-
+    public AudioClip activationSound;
 
     private bool _active;
 
@@ -55,9 +55,14 @@ public class Explosive : MonoBehaviour
             r.velocity = tool.rb.velocity;
             r.rotation = tool.rb.rotation;
         }
+
+        if (activationSound)
+        {
+            AudioSource.PlayClipAtPoint(activationSound, Vector2.zero);
+        }
     }
 
-    private void Explode()
+    public void Explode()
     {
         PhysicsManager.Instance.CreateExplosion(tool.rb.position, explosionForce, explosionRange, upwardsMod);
         Instantiate(explosionPrefab, tool.rb.position, Quaternion.identity);

@@ -50,6 +50,7 @@ MonoBehaviour:
   activationPrefab: {fileID: 0}
   explosionPrefab: {fileID: 4680000180832633783, guid: 74b53bfd048d3da4da95ddb6d58650a2, type: 3}
   explosionSound: {fileID: 8300000, guid: 10b14bf97706345438ad81093d793ee8, type: 3}
+  activationSound: {fileID: 8300000, guid: 476befbc127808c48997f71ebc85661b, type: 3}
 --- !u!1001 &4542764817612663672
 PrefabInstance:
   m_ObjectHideFlags: 0

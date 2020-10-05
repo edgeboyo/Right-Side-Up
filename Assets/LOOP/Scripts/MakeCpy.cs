@@ -19,6 +19,7 @@ public class MakeCpy : MonoBehaviour
 
         sb.sprite = ((SpriteRenderer)player.GetComponent("SpriteRenderer") as SpriteRenderer).sprite;
         this.transform.position = new Vector2(player.transform.position.x, player.transform.position.y);
+        this.transform.localScale = new Vector3(player.transform.localScale.x, player.transform.localScale.y, player.transform.localScale.z);
     }
 
     // Update is called once per frame

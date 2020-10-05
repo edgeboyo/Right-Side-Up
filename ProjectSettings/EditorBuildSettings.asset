@@ -12,16 +12,16 @@ EditorBuildSettings:
     path: Assets/LOOP/Scenes/Tutorial.unity
     guid: b20d67bec7b174f40bab321aa9883010
   - enabled: 1
-    path: Assets/LOOP/Scenes/Level 1.unity
+    path: Assets/LOOP/Scenes/Wood 1.unity
     guid: a9243a06877032b459d80c1372ddeefe
   - enabled: 1
-    path: Assets/LOOP/Scenes/Level 2.unity
+    path: Assets/LOOP/Scenes/Wood 2.unity
     guid: a9d435e8113320c4382ab668fc1205d8
   - enabled: 1
-    path: Assets/LOOP/Scenes/Level 3.unity
+    path: Assets/LOOP/Scenes/Wood 3.unity
     guid: 1f953348e43c3e44ab51325a110a10fa
   - enabled: 1
-    path: Assets/LOOP/Scenes/Level 4.unity
+    path: Assets/LOOP/Scenes/Wood 4.unity
     guid: cf82a13e11eb8444498a4a8549c4228f
   - enabled: 1
     path: Assets/LOOP/Scenes/Steel 1.unity

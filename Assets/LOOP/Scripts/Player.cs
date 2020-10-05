@@ -10,6 +10,7 @@ public class Player : MonoBehaviour
     [Header("Gameplay Values")]
     public float horizontalAcceleration;
     public float maxHorizontalVelocity;
+    public float stopModifier;
     //public float jumpForce;
 
     //[Header("Other Values")]
@@ -17,6 +18,7 @@ public class Player : MonoBehaviour
 
 
     private bool _touching;
+    private bool _stop;
 
 
     void Start()
@@ -50,12 +52,23 @@ public class Player : MonoBehaviour
             transform.position = new Vector2(transform.position.x + 2 * horzExtent, transform.position.y);
 
         // Accelerate horizontally
-        if (_touching)
+        if (_touching && SceneControl.Instance.IsSceneActive() && !_stop)
             rb.AddForce(Vector2.right * horizontalAcceleration * Time.fixedDeltaTime);
+
+        // stop if stopping
+        if (_stop)
+            rb.velocity = rb.velocity * stopModifier;
 
         // Drop to max velocity
         rb.velocity = new Vector2(Mathf.Min(rb.velocity.x, maxHorizontalVelocity), rb.velocity.y);
     }
+
+
+    public void Stop()
+    {
+        _stop = true;
+    }
+
 
     public void OnCollisionStay2D(Collision2D collision)
     {

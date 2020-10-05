@@ -50,6 +50,7 @@ MonoBehaviour:
   rb: {fileID: 2680683574486161715}
   horizontalAcceleration: 5000
   maxHorizontalVelocity: 10
+  stopModifier: 0.3
 --- !u!212 &2680683574486161726
 SpriteRenderer:
   m_ObjectHideFlags: 0

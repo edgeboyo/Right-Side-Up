@@ -19,25 +19,14 @@ public class Lever : MonoBehaviour
 
     void Start()
     {
-
-        float startAngle;
-        if (startingOn)
-        {
-            _on = true;
-            startAngle = turnAngle;
-        }
-        else
-        {
-            _on = false;
-            startAngle = -turnAngle;
-        }
-        stick.rotation = Quaternion.Euler(new Vector3(0, 0, startAngle));
+        _on = startingOn;
     }
 
 
     void Update()
     {
-        float stickAngle = stick.rotation.eulerAngles.z;
+        float stickAngle = stick.localRotation.eulerAngles.z;
+        if (stickAngle > 180) stickAngle = stickAngle - 360;
 
         if(!_on && stickAngle > turnAngle)
         {
@@ -45,6 +34,7 @@ public class Lever : MonoBehaviour
 
             _on = true;
             LeverOn?.Invoke(this, new EventArgs());
+            //Debug.Log("Lever ON");
         }
 
         else if(_on && stickAngle < -turnAngle)
@@ -53,6 +43,8 @@ public class Lever : MonoBehaviour
 
             _on = false;
             LeverOff?.Invoke(this, new EventArgs());
+            //Debug.Log("Lever OFF");
         }
+
     }
 }

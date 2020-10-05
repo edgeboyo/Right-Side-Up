@@ -472,6 +472,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3649854839083599634, guid: 3592b4092fc83314ebe63286f86c0f7e, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b8696816f29ee34486b5f5b7e2655c6, type: 3}
+    - target: {fileID: 3649854839083599634, guid: 3592b4092fc83314ebe63286f86c0f7e, type: 3}
+      propertyPath: m_Volume
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7502535423014806416, guid: 3592b4092fc83314ebe63286f86c0f7e, type: 3}
       propertyPath: m_Name
       value: Scene Stuff
